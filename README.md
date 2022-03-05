@@ -1,4 +1,4 @@
-## NoMoreStress
+## The Gladden Project
 
 Do you feel like you are feeling anxious, tired out, etc?
 
