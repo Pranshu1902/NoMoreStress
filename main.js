@@ -1,6 +1,18 @@
 // message
 let message = "";
 
+// create image
+function img_create(src, alt) {
+  var img = document.createElement("img");
+  img.src = src;
+  img.alt = alt;
+  img.style.width = "60%";
+  img.style.height = "70%";
+  img.style.paddingLeft = "10%";
+  img.style.paddingRight = "10%";
+  document.body.appendChild(img);
+}
+
 // main
 
 let but = document.getElementById("submit");
@@ -9,7 +21,7 @@ but.onclick = () => {
   let question1 = document.getElementsByName("1");
   for (i = 0; i < question1.length; i++) {
     if (question1[i].checked) {
-      let age_group = 90 - parseInt(question1[i].value) * 10 + 10;
+      let age_group = 90 - i * 10 - 10;
       message +=
         "You have around " +
         age_group +
@@ -63,16 +75,14 @@ but.onclick = () => {
   // Q.6
   let question6 = document.getElementsByName("6");
   for (i = 0; i < question4.length; i++) {
-    if (question6[i].value === "fame" && question6[i].checked) {
+    if (question6[i].value === "Fame" && question6[i].checked) {
       message +=
         "People often confuse success with fame and money(rich). You can be successful in your own terms and you don't need money or fame to prove that to yourself. If you are happy, have a purpose, and wake up everyday to do what you love then you are successful, that is the definition of success. <br>";
-      let img = document.createElement("img");
-      img.src = "Images/success.jpg";
-    } else if (question6[i].value === "money" && question6[i].checked) {
+      img_create("Images/success.jpg", "success");
+    } else if (question6[i].value === "Money" && question6[i].checked) {
       message +=
         "People often confuse success with fame and money(rich). You can be successful in your own terms and you don't need money or fame to prove that to yourself. If you are happy, have a purpose, and wake up everyday to do what you love then you are successful, that is the definition of success. <br>";
-      let img = document.createElement("img");
-      img.src = "Images/success.jpg";
+      img_create("Images/success.jpg", "success");
     }
   }
   // Q.7
